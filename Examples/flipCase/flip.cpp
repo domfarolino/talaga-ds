@@ -48,7 +48,7 @@ void readStream(istream &file){
 	char character;
 	// Note we use get here so we are sure to get ALL characters.
 	file.get(character);
-	while(file){ // This will pull in lines until the stream is exhausted
+	while(file){ // This will pull in characters until the stream is exhausted
 		cout << convertCharacter(character);
 		file.get(character);
 	}
