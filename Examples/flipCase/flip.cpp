@@ -44,16 +44,13 @@ char convertCharacter(const char &character){
 }
 
 void readStream(istream &file){
-	// Read lines from the given stream and print the converted characters to the screen.
-	string line;
-	// Note we use getline here so we are sure to get ALL characters except newlines.
-	getline(file, line);
+	// Read characters from the given stream and print the converted characters to the screen.
+	char character;
+	// Note we use get here so we are sure to get ALL characters.
+	file.get(character);
 	while(file){ // This will pull in lines until the stream is exhausted
-		for(int i = 0; i < line.length(); i++){
-			cout << convertCharacter(line[i]);
-		}
-		cout << endl;
-		getline(file, line);
+		cout << convertCharacter(character);
+		file.get(character);
 	}
 }
 
