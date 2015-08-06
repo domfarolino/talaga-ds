@@ -42,7 +42,7 @@ int main(int argc, char **argv){
 			case 'n':
 				// TODO
 				break;
-			case 't': // Caesar cipher rotation amount
+			case 't': 
 				// TODO
 			default:
 				displayUsage();
