@@ -82,7 +82,7 @@ int main(int argc, char **argv){
 	// File name given
 	if(global_args.use_file){
 		ifstream instream;
-		instream.open(global_args.file_name, ios::in );
+		instream.open(global_args.file_name.c_str(), ios::in );
 		if(instream.fail()){
 			cout << "Could not open " << global_args.file_name << endl;
 			return 1;
