@@ -27,6 +27,7 @@ Library::Library(string folder){
     }
     ent = readdir(directory);
   }
+  closedir(directory);
 }
 
 Library::~Library(){
