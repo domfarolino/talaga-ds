@@ -1,0 +1,5 @@
+*~
+*.o
+*.depend
+a.out
+*.zip
