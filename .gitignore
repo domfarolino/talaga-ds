@@ -3,3 +3,4 @@
 *.depend
 a.out
 *.zip
+testrunner.cpp
