@@ -223,7 +223,7 @@ public:
       sum2 += a.getAt(-2);
     }
     clock_t last2_stop = clock();
-    TS_ASSERT_DELTA(first_stop - first_stop, last2_stop - last2_start, 100);
+    TS_ASSERT_DELTA(first_stop - first_start, last2_stop - last2_start, 100);
   }
   
   void testSetAtSpeed1() {
@@ -243,7 +243,7 @@ public:
      a.setAt(42,SIZE - i - 1);
     }
     clock_t last2_stop = clock();
-    TS_ASSERT_DELTA(first_stop - first_stop, last2_stop - last2_start, 500);
+    TS_ASSERT_DELTA(first_stop - first_start, last2_stop - last2_start, 500);
   }
 };
 
@@ -341,7 +341,7 @@ public:
       a.remove(-1);
     }
     clock_t last2_stop = clock();
-    TS_ASSERT_DELTA(first_stop - first_stop, last2_stop - last2_start, 500);
+    TS_ASSERT_DELTA(first_stop - first_start, last2_stop - last2_start, 500);
   }
   
   void testRemoveSpeed2() {
@@ -362,7 +362,7 @@ public:
       a.remove(-2);
     }
     clock_t last2_stop = clock();
-    TS_ASSERT_DELTA(first_stop - first_stop, last2_stop - last2_start, 500);
+    TS_ASSERT_DELTA(first_stop - first_start, last2_stop - last2_start, 500);
   }
 };
 
@@ -639,7 +639,7 @@ public:
     }
     // Make sure the sum is OK  Yes, this is very slow!
     long long int count = 0;
-    for(int i = 0; i < a.size(); i++){
+    for(unsigned int i = 0; i < a.size(); i++){
       count = count +  a.getAt(i);
     }
     TS_ASSERT_EQUALS(count, size * (size - 1)); // Does the count match?
