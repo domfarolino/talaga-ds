@@ -66,7 +66,7 @@ public:
     clock_t last2_start = clock();
     a.splitHalf(b,c);
     clock_t last2_stop = clock();
-    TS_ASSERT((first_stop - first_stop) > (last2_stop - last2_start) - 30);
+    TS_ASSERT((first_stop - first_start) > (last2_stop - last2_start) - 30);
   }
 };
   
@@ -117,7 +117,7 @@ public:
     clock_t last2_start = clock();
     a.reverseThis();
     clock_t last2_stop = clock();
-    TS_ASSERT((first_stop - first_stop) > (last2_stop - last2_start) - 30);
+    TS_ASSERT((first_stop - first_start) > (last2_stop - last2_start) - 30);
   }
 };
 
