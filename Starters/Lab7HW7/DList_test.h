@@ -2,7 +2,6 @@
 #define DLIST_TEST_H
 
 #include "DList.h"
-
 #include <stdexcept>
 // Needed for space removal.
 #include <sstream>
@@ -26,7 +25,7 @@ class DListConCopyAssign : public CxxTest::TestSuite {
 public:
   
   // Constructor tests
-  void testEmpty() { 
+  void testEmpty() {
     DList<int> a;
     TS_ASSERT_EQUALS(a.size(), 0);
   }
@@ -223,7 +222,8 @@ public:
       sum2 += a.getAt(-2);
     }
     clock_t last2_stop = clock();
-    TS_ASSERT_DELTA(first_stop - first_start, last2_stop - last2_start, 100);
+    //TS_ASSERT_DELTA(first_stop - first_start, last2_stop - last2_start, 100);
+    TS_ASSERT_LESS_THAN(last2_stop - last2_start - 500, first_stop - first_start);
   }
   
   void testSetAtSpeed1() {
@@ -243,7 +243,8 @@ public:
      a.setAt(42,SIZE - i - 1);
     }
     clock_t last2_stop = clock();
-    TS_ASSERT_DELTA(first_stop - first_start, last2_stop - last2_start, 500);
+    //TS_ASSERT_DELTA(first_stop - first_start, last2_stop - last2_start, 500);
+    TS_ASSERT_LESS_THAN(last2_stop - last2_start - 500, first_stop - first_start);
   }
 };
 
@@ -341,7 +342,8 @@ public:
       a.remove(-1);
     }
     clock_t last2_stop = clock();
-    TS_ASSERT_DELTA(first_stop - first_start, last2_stop - last2_start, 500);
+    //TS_ASSERT_DELTA(first_stop - first_start, last2_stop - last2_start, 500);
+    TS_ASSERT_LESS_THAN(last2_stop - last2_start - 500, first_stop - first_start);
   }
   
   void testRemoveSpeed2() {
@@ -362,7 +364,8 @@ public:
       a.remove(-2);
     }
     clock_t last2_stop = clock();
-    TS_ASSERT_DELTA(first_stop - first_start, last2_stop - last2_start, 500);
+    //TS_ASSERT_DELTA(first_stop - first_start, last2_stop - last2_start, 500);
+    TS_ASSERT_LESS_THAN(last2_stop - last2_start - 500, first_stop - first_start);
   }
 };
 
