@@ -556,7 +556,7 @@ public:
     }
     // Make sure the sum is OK  Yes, this is very slow!
     long long int count = 0;
-    for(int i = 0; i < a.size(); i++){
+    for(unsigned int i = 0; i < a.size(); i++){
       count = count +  a.getAt(i);
     }
     TS_ASSERT_EQUALS(count, size * (size - 1)); // Does the count match?
