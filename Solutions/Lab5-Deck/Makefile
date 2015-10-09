@@ -44,7 +44,7 @@ CXXLOCATION = ../../cxxtest
 CXXTESTGEN = $(CXXLOCATION)/bin/cxxtestgen
 
 test: testrunner
-	./testrunner
+	./deck
 
 testrunner: testrunner.cpp
 	g++ -I. -I$(CXXLOCATION)/ -o deck testrunner.cpp
