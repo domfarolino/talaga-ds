@@ -39,8 +39,7 @@ clean:
 	rm -f suggest
 	
 # CXX Testing	
-CXXLOCATION = /home/student/CPPVideos/cxxtest
-#CXXLOCATION = /Users/ptalaga/Dropbox/UC/DS-Fall-2015/CPPVideos/cxxtest
+CXXLOCATION = ../../cxxtest
 CXXTESTGEN = $(CXXLOCATION)/bin/cxxtestgen
 
 test: testrunner 
