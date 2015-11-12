@@ -56,7 +56,7 @@ testrunner.cpp: $(HEADERS) $(TESTSSOURCES) $(SOURCES) $(TESTS)
 coverage: testrunner
 	rm -rf coverage
 	mkdir coverage
-	kcov --include-pattern=hw coverage ./testrunner
+	kcov --include-pattern=HW coverage ./testrunner
 	firefox coverage/testrunner/index.html &
 	
 suggest: suggest.cpp $(OBJECTS)
