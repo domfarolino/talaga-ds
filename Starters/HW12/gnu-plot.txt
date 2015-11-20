@@ -1,0 +1,12 @@
+//Install gnuplot:  sudo apt-get install gnuplot-x11
+
+// Pipe the output of the executable to a txt file
+g++ stackTest.cpp
+./a.out > data.csv
+
+// Run gnuplot
+gnuplot
+
+// Then plot using the following command
+
+ plot 'data.csv' using 1:2 title "Column 1", 'data.csv' using 1:3 title "Column 2"
